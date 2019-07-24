@@ -8,10 +8,20 @@ const taskManagerOptions = {
    * The absolute value of max jitter that will be added to ideal delay.
    * In this example the actual delay is 400 <= actual delay <= 600.
    */
-  delayJitterMax: 100,
+  delayJitterMax: 200,
   /** Number of tasks running in parallel. */
   parallelNum: 10,
   /** Whether to print debug messages. */
+  debug: true
+}
+
+/**
+ * no-delay options.
+ */
+const taskManagerNoDelayOptions = {
+  delay: 0,
+  delayJitterMax: 0,
+  parallelNum: 10,
   debug: true
 }
 
@@ -34,6 +44,7 @@ tasks = tasks.map((v, i) => {
  */
 let tmSync = new TaskManager(tasks, testFuncSync, taskManagerOptions)
 let tmAsync = new TaskManager(tasks, testFuncAsync, taskManagerOptions)
+let tmAsyncNoDelay = new TaskManager(tasks, testFuncAsync, taskManagerNoDelayOptions)
 
 /** Make them run. */
 main()
@@ -60,6 +71,10 @@ async function main() {
     console.log('Testing Async Function')
     tmAsync.start()
     await tmAsync.finish()
+
+    console.log('Testing Async Function without delay')
+    tmAsyncNoDelay.start()
+    await tmAsyncNoDelay.finish()
   } catch (error) {
     console.error(error)
   }
@@ -91,4 +106,3 @@ function testFuncAsync(task) {
     }, 500)
   })
 }
-
