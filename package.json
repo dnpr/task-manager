@@ -1,6 +1,6 @@
 {
   "name": "@dnpr/task-manager",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "Run JavaScript functions concurrently with control.",
   "author": "dragonman225",
   "license": "MIT",
