@@ -1,4 +1,4 @@
-const { TaskManager } = require('..')
+const { TaskManager } = require('../src')
 
 /** Config parameters of TaskManager. All fields are optional. */
 const taskManagerOptions = {

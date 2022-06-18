@@ -1,4 +1,4 @@
-const TaskManager = require('./task-manager')
-const TaskManager2 = require('./task-manager-2')
+const TaskManager = require('./TaskManager')
+const TaskManager2 = require('./TaskManager2')
 
 module.exports = { TaskManager, TaskManager2 }

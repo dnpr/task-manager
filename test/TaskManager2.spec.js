@@ -1,4 +1,4 @@
-const { TaskManager2 } = require('..')
+const { TaskManager2 } = require('../src')
 const { sleep, brokenSleep } = require('./util')
 
 main()
