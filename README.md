@@ -10,7 +10,8 @@ npm install @dnpr/task-manager
 
 ## Usage
 
-* Refer to `test/task-manager.spec.js` for demonstration.
+* (Recommended) To use v2, see [`test/TaskManager2.spec.js`](test/TaskManager2.spec.js).
+* To use v1, see [`test/TaskManager.spec.js`](test/TaskManager.spec.js).
 
 ## Background
 
