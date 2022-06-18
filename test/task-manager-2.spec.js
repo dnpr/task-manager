@@ -1,5 +1,5 @@
-const { TaskManager2 } = require("..")
-const { sleep, brokenSleep } = require("./util")
+const { TaskManager2 } = require('..')
+const { sleep, brokenSleep } = require('./util')
 
 main()
 
@@ -9,7 +9,7 @@ async function main() {
   let RunningTasks = []
 
   /** Normal sleep. */
-  console.log("Let's try normal sleep first.")
+  console.log('Let\'s try normal sleep first.')
   for (let i = 1; i <= 15; i++) {
     const startTime = Date.now()
     const runningTask = tm2.queue(sleep, [1000])
@@ -29,7 +29,7 @@ async function main() {
   RunningTasks = []
 
   /** Broken sleep. */
-  console.log("Now let's try broken sleep.")
+  console.log('Now let\'s try broken sleep.')
   for (let i = 1; i <= 15; i++) {
     const startTime = Date.now()
     const runningTask = tm2.queue(brokenSleep, [1000])

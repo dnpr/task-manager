@@ -15,7 +15,7 @@ function randomInt(max) {
  */
 function log() {
   let args = Array.from(arguments)
-  args.unshift("[D/task-manager]")
+  args.unshift('[D/task-manager]')
   console.log.apply(console, args)
 }
 

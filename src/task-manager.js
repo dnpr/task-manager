@@ -1,4 +1,4 @@
-const { log, randomInt } = require("./util")
+const { log, randomInt } = require('./util')
 
 /**
  * @module TaskManager
@@ -24,9 +24,9 @@ module.exports = TaskManager
  */
 function TaskManager(tasks, execFunc, options = {}) {
 
-  let execDelay = typeof options.delay === "number"
+  let execDelay = typeof options.delay === 'number'
     ? options.delay : 1000
-  let execDelayJitterMax = typeof options.delayJitterMax === "number"
+  let execDelayJitterMax = typeof options.delayJitterMax === 'number'
     ? options.delayJitterMax : 100
   let parallelNum = options.parallelNum || 3
   let debugEnabled = options.debug || false
@@ -38,7 +38,7 @@ function TaskManager(tasks, execFunc, options = {}) {
   let done
 
   if (parallelNum > taskNum) {
-    if (debugEnabled) log("Warning: parallelNum should be smaller than taskNum.")
+    if (debugEnabled) log('Warning: parallelNum should be smaller than taskNum.')
   }
 
   /**

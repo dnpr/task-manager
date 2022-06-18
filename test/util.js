@@ -9,7 +9,7 @@ async function brokenSleep(ms) {
     if (Math.random() >= 0.5)
       setTimeout(resolve, ms)
     else
-      reject("I don't want to sleep.")
+      reject('I don\'t want to sleep.')
   })
 }
 

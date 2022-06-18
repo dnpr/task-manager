@@ -1,4 +1,4 @@
-const { TaskManager } = require("..")
+const { TaskManager } = require('..')
 
 /** Config parameters of TaskManager. All fields are optional. */
 const taskManagerOptions = {
@@ -52,7 +52,7 @@ main()
 async function main() {
   try {
     /** Usage of sync mode. */
-    console.log("Testing Sync Function")
+    console.log('Testing Sync Function')
 
     /** Start executing tasks. */
     tmSync.start()
@@ -68,11 +68,11 @@ async function main() {
      * Usage of async mode is the same. 
      * You just replace the execFunc with an async one.
      */
-    console.log("Testing Async Function")
+    console.log('Testing Async Function')
     tmAsync.start()
     await tmAsync.finish()
 
-    console.log("Testing Async Function without delay")
+    console.log('Testing Async Function without delay')
     tmAsyncNoDelay.start()
     await tmAsyncNoDelay.finish()
   } catch (error) {
